@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calcular média aritmérica</title>
+  </head>
+
+  <body>
+    <label for="nota1">Nota 1:</label>
+    <input type="text" id="nota1" /><br />
+
+    <label for="nota2">Nota 2:</label>
+    <input type="text" id="nota2" /><br />
+
+    <label for="nota3">Nota 3:</label>
+    <input type="text" id="nota3" /><br />
+
+    <label for="nota4">Nota 4:</label>
+    <input type="text" id="nota4" /><br />
+
+    <button onclick="calcularMedia()">Calcular Média</button><br />
+    <button onclick="zerarValores()">Nova média</button><br />
+
+    <label>Resultado:</label>
+    <p id="resultado">0</p>
+  </body>
+
+  <script>
+    function calcularMedia() {
+      var nota1 = parseInt(document.getElementById('nota1').value)
+      var nota2 = parseInt(document.getElementById('nota2').value)
+      var nota3 = parseInt(document.getElementById('nota3').value)
+      var nota4 = parseInt(document.getElementById('nota4').value)
+
+      var media = (nota1 + nota2 + nota3 + nota4) / 4
+
+      var resultado = document.getElementById('resultado')
+
+      console.log(document.getElementById('resultado').innerHTML)
+      resultado.innerHTML = media
+    }
+
+    function zerarValores() {
+      document.getElementById('nota1').value = ''
+      document.getElementById('nota2').value = ''
+      document.getElementById('nota3').value = ''
+      document.getElementById('nota4').value = ''
+      document.getElementById('resultado').innerHTML = ''
+    }
+  </script>
+</html>
